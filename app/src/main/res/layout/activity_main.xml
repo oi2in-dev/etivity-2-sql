@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    
+
     <EditText
         android:id="@+id/idEdtcodeName"
         android:layout_width="match_parent"
@@ -29,6 +29,14 @@
 
     <Button
         android:id="@+id/idBtnAddCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Add Entry"
+        android:textAllCaps="true" />
+
+    <Button
+        android:id="@+id/idBtnDisplayDb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
