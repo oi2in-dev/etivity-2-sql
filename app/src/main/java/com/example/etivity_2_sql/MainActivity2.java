@@ -27,6 +27,7 @@ public class MainActivity2 extends AppCompatActivity implements SensorEventListe
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         sensorManager.registerListener(MainActivity2.this,sensor,sensorManager.SENSOR_DELAY_NORMAL );
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

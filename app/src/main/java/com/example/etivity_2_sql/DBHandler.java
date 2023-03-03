@@ -11,7 +11,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "codedb";
     private static final int DB_VERSION = 1;
-    private static final String TABLE_NAME = "mycourses";
+    private static final String TABLE_NAME = "mycode";
     private static final String ID_COL = "id";
     private static final String NAME_COL = "name";
     private static final String CREATION_COL = "creation";

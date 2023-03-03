@@ -15,7 +15,8 @@
         android:theme="@style/Theme.Etivity2sql" >
         <activity
             android:name=".MainActivity2"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity2"/>
         <activity
             android:name=".MainActivity"
             android:exported="true" >
