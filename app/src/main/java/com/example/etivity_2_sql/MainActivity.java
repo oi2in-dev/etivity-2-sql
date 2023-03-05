@@ -1,12 +1,14 @@
 package com.example.etivity_2_sql;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private EditText codeNameEdt, codeCreationEdt, codeDescriptionEdt;
     private DBHandler dbHandler;
@@ -16,12 +18,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button page = findViewById(R.id.switchboard);
+        page.setOnClickListener((View.OnClickListener) this);
+
         codeNameEdt = findViewById(R.id.idEdtcodeName);
         codeCreationEdt = findViewById(R.id.idEdtcodeCreation);
         codeDescriptionEdt = findViewById(R.id.idEdtcodeDescription);
         Button addCodeBtn = findViewById(R.id.idBtnAddCode);
 
         dbHandler = new DBHandler(MainActivity.this);
+
 
         addCodeBtn.setOnClickListener(v -> {
 
@@ -42,5 +48,15 @@ public class MainActivity extends AppCompatActivity {
             codeCreationEdt.setText("");
             codeDescriptionEdt.setText("");
         });
+
+    }
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.switchboard:
+                Intent home = new Intent(getApplicationContext(), MainActivity2.class);
+                startActivity(home);
+                break;
+
+        }
     }
 }

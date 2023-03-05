@@ -1,14 +1,17 @@
 package com.example.etivity_2_sql;
+
+
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHandler extends SQLiteOpenHelper {
 
-    private static final String DB_NAME = "coursedb";
+    private static final String DB_NAME = "codedb";
     private static final int DB_VERSION = 1;
-    private static final String TABLE_NAME = "mycourses";
+    private static final String TABLE_NAME = "mycode";
     private static final String ID_COL = "id";
     private static final String NAME_COL = "name";
     private static final String CREATION_COL = "creation";
@@ -49,5 +52,11 @@ public class DBHandler extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
+    }
+
+    public Cursor getListContents() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        return data;
     }
 }
