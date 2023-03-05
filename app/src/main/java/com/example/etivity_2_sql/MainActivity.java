@@ -1,4 +1,11 @@
+// Assignment E-tivity 2 ED5042
+// Oisin O'Sullivan 21304971
+
+
+
 package com.example.etivity_2_sql;
+
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button page = findViewById(R.id.switchboard);
+        Button page = findViewById(R.id.accelerometer);
         page.setOnClickListener((View.OnClickListener) this);
 
         codeNameEdt = findViewById(R.id.idEdtcodeName);
@@ -36,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String codeDescription = codeDescriptionEdt.getText().toString();
 
             if (codeName.isEmpty() && codeCreation.isEmpty() && codeDescription.isEmpty()) {
-                Toast.makeText(MainActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Please enter info in ALL fields.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -52,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.switchboard:
+            case R.id.accelerometer:
                 Intent home = new Intent(getApplicationContext(), MainActivity2.class);
                 startActivity(home);
                 break;

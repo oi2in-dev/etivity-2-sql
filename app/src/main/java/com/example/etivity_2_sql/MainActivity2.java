@@ -1,13 +1,15 @@
+// Assignment E-tivity 2 ED5042
+// Oisin O'Sullivan 21304971
+
+
+
 package com.example.etivity_2_sql;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.widget.TextView;
 

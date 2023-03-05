@@ -1,3 +1,7 @@
+// Assignment E-tivity 2 ED5042
+// Oisin O'Sullivan 21304971
+
+
 package com.example.etivity_2_sql;
 
 
