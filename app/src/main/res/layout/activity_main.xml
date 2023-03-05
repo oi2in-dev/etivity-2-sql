@@ -36,11 +36,11 @@
         android:textAllCaps="true" />
 
     <Button
-        android:id="@+id/switchboard"
+        android:id="@+id/accelerometer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Switch Board"
+        android:text="Accelerometer"
         android:textAllCaps="true" />
 
 </LinearLayout>
